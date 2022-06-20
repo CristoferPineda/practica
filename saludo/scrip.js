@@ -1,21 +1,16 @@
 console.log("Se nota que todabia me extrañas");
 
 
-setInterval( cambiarSaludo, 2000);
+setInterval(cambiarSaludo, 2000);
 
-function cambiarSaludo(){
-    //console.log("Me parece una falta de respeto");
-    let frase = document.getElementsByTagName("h2")[1].innerHTML
-
-
-if( document.getElementsByTagName("h2")[1].innerHTML == "Ganando como siempre , mis cielas"){
-    //frase = "Impongo moda para las niñas"
-    document.getElementsByTagName("h2")[1].innerHTML= "Impongo moda para las niñas!";
-}
-else{
-    //frase = "Ganando como siempre , mis cielas";
-    document.getElementsByTagName("h2")[1].innerHTML = "Ganando como siempre , mis cielas";
-
-}
-console.log("frase :" + frase);
+function cambiarSaludo() {
+    let frase = document.getElementsByTagName("h2")[1];
+    console.log(frase);
+    if (frase.innerHTML == "Ganando como siempre , mis cielas") {
+        frase.innerHTML = "Impongo moda para las niñas!";
+    }
+    else {
+        frase.innerHTML = "Ganando como siempre , mis cielas";
+    }
+    console.log("frase :" + frase);
 }
